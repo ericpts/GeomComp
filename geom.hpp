@@ -101,9 +101,9 @@ istream& operator>> (istream& cin, Vector<N>& v) {
 template<int N>
 ostream& operator<< (ostream& cout, const Vector<N>& v) {
 	cout << "{";
-	for(int i = 0; i < N; ++i)
+	for(int i = 0; i + 1 < N; ++i)
 		cout << v[i] << ", ";
-	cout << "}";
+	cout << v[N - 1] << "}";
 	return cout;
 }
 
