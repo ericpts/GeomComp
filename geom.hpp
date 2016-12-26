@@ -92,6 +92,15 @@ static double cross(Vector<2> u, Vector<2> v)
 }
 
 template<int N>
+double dot(Vector<N> u, Vector<N> v)
+{
+	double ret = 0;
+	for(int i = 0; i < N; ++i)
+		ret += u[i] * v[i];
+	return ret;
+}
+
+template<int N>
 istream& operator>> (istream& cin, Vector<N>& v) {
 	for(int i = 0; i < N; ++i)
 		cin >> v.comp[i];
