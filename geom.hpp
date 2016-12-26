@@ -72,6 +72,10 @@ struct Vector {
 	}
 };
 
+template<int N>
+Vector<N> operator* (double s, Vector<N> v) {
+	return v * s;
+}
 
 static Vector<3> cross(Vector<3> u, Vector<3> v)
 {
