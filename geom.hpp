@@ -20,7 +20,7 @@ struct Vector {
 
 	Vector operator- (Vector v) const {
 		for(int i = 0; i < N; ++i)
-			v[i] -= comp[i];
+			v[i] = comp[i] - v[i];
 		return v;
 	}
 
